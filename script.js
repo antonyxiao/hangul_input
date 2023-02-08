@@ -355,7 +355,8 @@ function dynamicStringProcessing(e, carryOver, carryOverConsonant) {
             dynamicString.push([table[e.keyCode][0]]);
             
             // make key available for a possible medial vowel
-            key.pop();
+            reset();
+            key.push(table[e.keyCode][1]);
             
         } else {
             
