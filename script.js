@@ -438,18 +438,17 @@ function printResult() {
         if (!i) {
             continue;
         } else if (i.length == 1) {
-            string += String.fromCharCode(i[0]);
+            dec_uni = i[0];
         } else if (i.length == 2) {
             dec_uni = calculate(i[0], i[1], 0);
-            string += String.fromCharCode(dec_uni);
         } else if (i.length == 3) {
             dec_uni = calculate(i[0], i[1], i[2]);
-            string += String.fromCharCode(dec_uni);
         } else if (i.length == 4) {
             let compound_code = compound_consonant_table[ [i[2], i[3]] ];
             dec_uni = calculate(i[0], i[1], compound_code);
-            string += String.fromCharCode(dec_uni);
         }
+        
+        string += String.fromCharCode(dec_uni);
     }// for
     
     $('#output').html(string);
