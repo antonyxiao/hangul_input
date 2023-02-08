@@ -11,10 +11,6 @@ consonant + vowel + vowel
 consonant + vowel + vowel + consonant
 consonant + vowel + vowel + consonant + consonant
 
-
-BUG:
-    I1MFF I2M Deletion with certain I2 will result in I1MFF or I1MFF2 where F2 is I2
-
 */
 
 var dynamicString = [];
